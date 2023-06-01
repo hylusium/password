@@ -18,19 +18,21 @@ class RandomGen:
         self.finalPass = self.ChangePassword()
 
     def ChangePassword(self):
+        
         for i in range(len(self.password)):
+            print(self.password)
             temp = randrange(1,5)
             if temp == 1:
                 j = randrange(0,len(self.CapLetter))
                 self.password[i] = self.CapLetter[j]
             elif temp == 2:
-                 j = randrange(0,len(self.CapLetter))
+                 j = randrange(0,len(self.NorLetter))
                  self.password[i] = self.NorLetter[j]
             elif temp == 3:
-                j = randrange(0,len(self.CapLetter))
+                j = randrange(0,len(self.num))
                 self.password[i] = self.num[j]
             elif temp == 4:
-                j = randrange(0,len(self.CapLetter))
+                j = randrange(0,len(self.SpeChar))
                 self.password[i] = self.SpeChar[j]
 
         finalPassword = "".join(self.password)
