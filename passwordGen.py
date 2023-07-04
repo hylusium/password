@@ -12,6 +12,7 @@ class RandomGen:
 
     def RandomLength(self):
         self.length = 0
+        self.password.clear()
         self.length = randrange(8,20)
         for i in range(self.length):
             self.password.append("t")
@@ -20,7 +21,6 @@ class RandomGen:
     def ChangePassword(self):
         
         for i in range(len(self.password)):
-            print(self.password)
             temp = randrange(1,5)
             if temp == 1:
                 j = randrange(0,len(self.CapLetter))
